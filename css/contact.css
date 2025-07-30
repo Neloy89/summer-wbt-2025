@@ -1,0 +1,66 @@
+body{
+    background-image: url(/wbt/image/image.png);
+    background-size: cover;
+    text-align: center;
+    margin: 20px;
+}
+
+ header{
+    background-color: #ceeddf;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+ }
+header a{
+    text-decoration: none;
+    margin: 65px;
+    color: #0066cc;
+    font-weight: bold;
+    
+}
+
+div{
+    padding-right: 1%;
+    margin: 1%;
+}
+
+.con{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 4px 12px #ceeddf;
+    
+}
+
+
+
+.c1{
+    display: flex;
+    align-items: center;
+}
+
+
+.c2{
+        
+    font-size: 9px;
+    margin-left: 10px;
+    text-align: left;
+    font-size: 15px;
+}
+
+
+p{
+    color: #000000;
+    display: inline;
+}
+
+
+
+footer{
+    text-align: center;
+}
+
+footer img{
+    height:30px;
+    width: 30px;
+    box-shadow: 0 4px 12px #ceeddf;
+}
