@@ -1,88 +1,115 @@
-body{
-    background-image: url(/wbt/image/image.png);
-    background-size: cover;
-    margin: 20px;
+body {
+  background-image: url(/wbt/image/image.png);
+  background-size: cover;
+  margin: 20px;
 }
 
- header{
-    background-color: #ceeddf;
-    height: 30px;
-    padding: 10px;
-    text-align: center;
- }
-header a{
-    text-decoration: none;
-    margin: 65px;
-    color: #0066cc;
-    font-weight: bold;
-    
+header {
+  background-color: #ceeddf;
+  height: 30px;
+  padding: 10px;
+  padding-top: 16px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+header a {
+  text-decoration: none;
+  margin: 65px;
+  color: #000000;
+  font-weight: bold;
 }
 
-.pro{
-    display: flex;
-    justify-content: left;
-    box-shadow: 0 4px 12px #ceeddf;
+.pro {
+  display: flex;
+  justify-content: left;
+  box-shadow: 0 4px 12px #ceeddf;
 }
 
-div{
-    padding-right: 1%;
-    margin: 1%;
+div {
+  padding-right: 1%;
+  margin: 1%;
 }
 
-.c1{
-    display: flex;
-    align-items: center;
+img {
+  height: auto;
+  width: 320px;
+  transition: all 1s;
 }
 
-img{
-    height: auto;
-    width: 300px;
-    transition: all 1s;
-    
-}
-img:hover{
-    transform: scale(1.2);
+img:hover {
+  transform: scale(1.2);
 }
 
-.c2{
-        
-    font-size: 9px;
-    margin-left: 10px;
-}
-.c2 h3{
-    font-size:3em;
-    margin: 0px 0px 0px 0px;
-}
-.c2 p{
-    font-size: 2em;
+.c1 {
+  display: flex;
+  align-items: center;
 }
 
-p{
-    color: #000000;
-    display: inline;
+.c2 {
+  font-size: 9px;
+  margin-left: 10px;
+  border-left: 4px solid #57dcbb;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding-left: 12px;
 }
-
+.c2 h3 {
+  font-size: 3em;
+  margin: 0px 0px 0px 0px;
+}
+.c2 p {
+  font-size: 2em;
+}
 
 .c2:hover {
-    background-color: #f0f8ff;
-    color: #0d259b;
+  /* background-color: #f0f8ff; */
+  color: #000000;
+  transform: scale(1.1);
+  transition: all 1s;
 }
 
 .c2:hover h3 {
-    color: #18a8dc;
+  color: #18a8dc;
 }
 
 .c2:hover p {
-    color: #102f44;
+  color: #102f44;
 }
 
-
-footer{
-    text-align: center;
+p {
+  color: #000000;
+  display: inline;
 }
 
-footer img{
-    height:30px;
-    width: 30px;
-    box-shadow: 0 4px 12px #ceeddf;
+.c2:hover {
+  background-color: #f0f8ff;
+  color: #0d259b;
+}
+
+.c2:hover h3 {
+  color: #18a8dc;
+}
+
+.c2:hover p {
+  color: #102f44;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+footer img {
+  height: 30px;
+  width: 30px;
+  box-shadow: 0 4px 12px #ceeddf;
+}
+footer a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+}
+footer p {
+  margin: 0px;
 }

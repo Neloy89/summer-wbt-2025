@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/wbt/css/info.css" />
+  </head>
+  <body>
+    <header>
+      <a href="/wbt/index.html">Home</a>
+      <a href="/wbt/html/education.html">Education</a>
+      <a href="/wbt/html/project.html">Projects</a>
+      <a href="/wbt/html/experience.html">Experience</a>
+      <a href="/wbt/html/contact.html">Contact</a>
+    </header>
+    <section>
+      <div id="infoDiv" style="display: none">
+        <h2>Your Submitted Information</h2>
+        <div class="info-box">
+          <p><strong>First Name:</strong> <span id="showFirstname"></span></p>
+          <p><strong>Last Name:</strong> <span id="showLastname"></span></p>
+          <p><strong>Email:</strong> <span id="showEmail"></span></p>
+          <p><strong>Project Type:</strong> <span id="showProject"></span></p>
+          <p>
+            <strong>Working Categories:</strong>
+            <span id="showCategories"></span>
+          </p>
+          <p>
+            <strong>Consulting Date:</strong> <span id="showConsulting"></span>
+          </p>
+          <p><strong>Username:</strong> <span id="showUsername"></span></p>
+          <p><strong>Password:</strong> <span id="showPassword"></span></p>
+        </div>
+        <div class="buttons">
+          <button onclick="window.history.back()">Back</button>
+          <button onclick="alert('Form submission complete!')">OK</button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const data = JSON.parse(localStorage.getItem("contactData"));
+        let inputUsername = prompt("Enter your username:");
+        let inputPassword = prompt("Enter your password:");
+
+        if (
+          data &&
+          inputUsername === data.username &&
+          inputPassword === data.password
+        ) {
+          document.getElementById("infoDiv").style.display = "block";
+          document.getElementById("showFirstname").textContent = data.firstname;
+          document.getElementById("showLastname").textContent = data.lastname;
+          document.getElementById("showEmail").textContent = data.email;
+          document.getElementById("showProject").textContent = data.project;
+          document.getElementById("showCategories").textContent = Array.isArray(
+            data.categories
+          )
+            ? data.categories.join(", ")
+            : "";
+          document.getElementById("showConsulting").textContent =
+            data.consulting;
+          document.getElementById("showUsername").textContent = data.username;
+          document.getElementById("showPassword").textContent = data.password;
+        } else {
+          alert("Invalid username or password!");
+          window.history.back();
+          //document.getElementById("infoDiv").style.display = "none";
+        }
+      });
+    </script>
+
+    <footer>
+      <a href="mailto:fardinneloy89@gmail.com" target="_main"
+        ><img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaAuJC3T4we7EMGLKHmlqoN960tceVmxPlfg&s"
+          alt="fardinneloy89@gmail.com"
+          height="30"
+      /></a>
+      <a href="https://www.facebook.com/mdrobin.neloy" target="_main"
+        ><img
+          src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png"
+          alt="facebook"
+          height="30"
+      /></a>
+      <a href="https://github.com/Neloy89"
+        ><img
+          src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_960_720.png"
+          height="30"
+      /></a>
+      <br />
+
+      <p>
+        Copyright <time datetime="2025">2025</time> All rights reserved
+        <strong>©</strong>
+      </p>
+    </footer>
+  </body>
+</html>

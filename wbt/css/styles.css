@@ -1,4 +1,3 @@
-
 /* header ul {
     list-style: none;
     background-color: #ceeddf;
@@ -9,56 +8,80 @@ header li{
     margin: 60px;
     height: 20px;
 } */
-body{
-    background-image: url(/wbt/image/image.png);
-    background-size: cover;
-    margin: 20px;
+body {
+  background-image: url(/wbt/image/image.png);
+  background-size: cover;
+  margin: 40px;
 }
 
- header{
-    background-color: #ceeddf;
-    height: 30px;
-    padding: 10px;
-    text-align: center;
- }
-header a{
-    text-decoration: none;
-    margin: 65px;
-    color: #0066cc;
-    font-weight: bold;
-    
+header {
+  background-color: #ceeddf;
+  height: 30px;
+  padding: 10px;
+  padding-top: 16px;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+header a {
+  text-decoration: none;
+  margin: 65px;
+  color: #000000;
+  font-weight: bold;
 }
 
-
-img{
-    height: auto;
-    width: 400px;
-    transition: all 1s;
-    
-}
-img:hover{
-    transform: scale(1.2);
+img {
+  height: auto;
+  width: 400px;
+  transition: all 1s;
+  margin: 20px;
 }
 
-#text{
-    font-size: larger;
-    justify-content: left;
-    box-shadow: 0 4px 12px #ceeddf;
+.home {
+  display: flex;
 }
 
+img:hover {
+  transform: scale(1.2);
+}
+
+#text {
+  font-size: larger;
+  justify-content: left;
+  box-shadow: 0 4px 12px #ceeddf;
+  padding: 15px;
+  margin-left: 10px;
+  border-left: 4px solid #57dcbb;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-right: 4px solid #57dcbb;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 12px;
+}
 
 #text:hover {
-    background-color: #f0f8ff;
-    /* color: #0d259b; */
+  background-color: #f0f8ff;
+  color: #000000;
+  transform: scale(1.1);
+  transition: all 1s;
 }
 
-
-footer{
-    text-align: center;
+footer {
+  text-align: center;
+  margin-top: 40px;
 }
-
-footer img{
-    height:30px;
-    width: 30px;
-    box-shadow: 0 4px 12px #ceeddf;
+footer img {
+  height: 30px;
+  width: 30px;
+  box-shadow: 0 4px 12px #ceeddf;
+}
+footer a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0px;
+}
+footer p {
+  margin: 0px;
 }

@@ -1,7 +1,6 @@
 body {
   background-image: url(/wbt/image/image.png);
   background-size: cover;
-  text-align: center;
   margin: 40px;
 }
 
@@ -21,46 +20,32 @@ header a {
   font-weight: bold;
 }
 
-h1 {
-  background-color: #7ee2dc;
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-
 div {
   padding-right: 1%;
   margin: 1%;
 }
 
-form {
-  margin: 30px 70px;
+.info-box {
+  padding-left: 2%;
+  margin: 2%;
 }
-.form-group {
-  display: flex;
-  align-content: center;
-  margin: 10px;
-}
-
-.form-group label {
-  flex-basis: 500px;
-  text-align: right;
-  margin-right: 10px;
-  font-weight: bold;
-}
-
-.form-buttons {
-  text-align: center;
-  margin-top: 20px;
-}
-
-div {
-  text-align: left;
+.buttons {
+  color: #ffffff;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 img:hover {
   transform: scale(1.2);
   transition: all 1s;
+}
+
+p {
+  color: #000000;
+  display: block;
+  font-size: large;
 }
 
 footer {
