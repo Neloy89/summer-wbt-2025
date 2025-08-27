@@ -1,5 +1,6 @@
 <?php
-for ($i = 1; $i <= 3; $i++) {
+
+for ($i = 5; $i >= 1; $i--) {
     for ($j = 1; $j <= $i; $j++) {
         echo "*";
     }
@@ -7,7 +8,7 @@ for ($i = 1; $i <= 3; $i++) {
 }
 echo "<br>";
 
-for ($i = 3; $i >= 1; $i--) {
+for ($i = 1; $i <= 4; $i++) {
     for ($j = 1; $j <= $i; $j++) {
         echo "$j ";
     }
@@ -15,11 +16,10 @@ for ($i = 3; $i >= 1; $i--) {
 }
 echo "<br>";
 
-$char = 'A';
-for ($i = 1; $i <= 3; $i++) {
+for ($i = 1; $i <= 4; $i++) {
+    $char = chr(64 + $i); 
     for ($j = 1; $j <= $i; $j++) {
         echo "$char ";
-        $char++;
     }
     echo "<br>";
 }
