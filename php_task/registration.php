@@ -66,7 +66,6 @@ $dobErr = $mobileErr = $emailErr = $passwordErr = $genderErr = "";
 $departmentErr = $courseErr = $cityErr = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
     $rollno = test_input($_POST["rollno"]);
     $firstname = test_input($_POST["firstname"]);
     $lastname = test_input($_POST["lastname"]);
@@ -82,41 +81,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $city = test_input($_POST["city"]);
     $address = test_input($_POST["address"]);
 
-    
     if (isset($_POST["department"])) {
         $department = $_POST["department"];
     } else {
         $department = [];
     }
 
-    
+    // Validation
     if (empty($rollno)) {
         $rollnoErr = "Roll number is required";
+    } elseif (!preg_match("/^[0-9]+$/", $rollno)) {
+        $rollnoErr = "Only numbers are allowed";
     }
 
     if (empty($firstname)) {
         $firstnameErr = "First name is required";
+    } elseif (!preg_match("/^[a-zA-Z-' ]*$/", $firstname)) {
+        $firstnameErr = "Only letters and white space allowed";
     }
 
     if (empty($lastname)) {
         $lastnameErr = "Last name is required";
+    } elseif (!preg_match("/^[a-zA-Z-' ]*$/", $lastname)) {
+        $lastnameErr = "Only letters and white space allowed";
     }
 
     if (empty($fathername)) {
         $fathernameErr = "Father's name is required";
+    } elseif (!preg_match("/^[a-zA-Z-' ]*$/", $fathername)) {
+        $fathernameErr = "Only letters and white space allowed";
     }
 
     if (empty($day) || empty($month) || empty($year)) {
         $dobErr = "Date of birth is required";
+    } elseif (!preg_match("/^[0-9]+$/", $day) || !preg_match("/^[0-9]+$/", $month) || !preg_match("/^[0-9]+$/", $year)) {
+        $dobErr = "Date of birth must be numbers only";
     }
 
     if (empty($mobile)) {
         $mobileErr = "Mobile number is required";
+    } elseif (!preg_match("/^[0-9]+$/", $mobile)) {
+        $mobileErr = "Only numbers are allowed";
     }
 
     if (empty($email)) {
         $emailErr = "Email is required";
-    } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $emailErr = "Invalid email format";
     }
 
@@ -138,6 +148,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if (empty($city)) {
         $cityErr = "City is required";
+    } elseif (!preg_match("/^[a-zA-Z-' ]*$/", $city)) {
+        $cityErr = "Only letters and white space allowed";
     }
 }
 
@@ -172,11 +184,11 @@ function test_input($data) {
         <div class="formGroup">
             <label>Date of birth :</label>
             <div class="dobInputs">
-                <input type="number" name="day" placeholder="Day" value="<?php echo $day; ?>">
+                <input type="text" name="day" placeholder="Day" value="<?php echo $day; ?>">
                 <span>-</span>
-                <input type="number" name="month" placeholder="Month" value="<?php echo $month; ?>">
+                <input type="text" name="month" placeholder="Month" value="<?php echo $month; ?>">
                 <span>-</span>
-                <input type="number" name="year" placeholder="Year" value="<?php echo $year; ?>">
+                <input type="text" name="year" placeholder="Year" value="<?php echo $year; ?>">
                 <span style="margin-left: 10px">(DD-MM-YYYY)</span>
             </div>
             <span style="color:red">* <?php echo $dobErr;?></span>
