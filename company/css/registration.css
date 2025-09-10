@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: serif;
+}
+
+.container {
+  border: 2px solid #333;
+  margin: 10px auto;
+  width: 900px;
+  background: #fff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px 0 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.company-name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-right: auto;
+  margin-left: 10px;
+}
+
+.nav {
+  font-size: 1em;
+  margin-top: 10px;
+}
+
+.nav a {
+  color: purple;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: 1px solid #333;
+  margin: 0;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+form {
+  width: 600px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.label-text {
+  min-width: 160px;
+  display: inline-block;
+  font-size: 1em;
+}
+
+.colon {
+  margin: 0 10px 0 0;
+  font-weight: bold;
+}
+
+.form-title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 18px;
+  border: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 300px;
+  padding: 5px 8px;
+  font-size: 1em;
+  border: 1px solid #888;
+  border-radius: 2px;
+  margin-left: 0;
+}
+
+/* Boxed group for Gender and DOB */
+.box-group {
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.box-label {
+  font-size: 1em;
+  font-weight: normal;
+  margin-bottom: 2px;
+  margin-left: 2px;
+}
+.box-content {
+  border: 2px solid #888;
+  padding: 8px 12px 10px 12px;
+  width: 100%;
+  background: #fff;
+  display: flex;
+  align-items: center;
+}
+.gender-box label {
+  margin-right: 18px;
+  font-weight: normal;
+  display: inline-block;
+}
+.gender-box input[type="radio"] {
+  margin-left: 10px;
+  margin-right: 3px;
+}
+.dob-box input[type="text"] {
+  width: 44px;
+  margin-right: 4px;
+  text-align: center;
+  display: inline-block;
+}
+.dob-box .dob-format {
+  margin-left: 8px;
+  font-size: 0.95em;
+  color: #444;
+  display: inline-block;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 4px 16px;
+  font-size: 1em;
+  border: 1px solid #888;
+  border-radius: 2px;
+  background: #f8f8f8;
+  cursor: pointer;
+}
+.form-group.buttons {
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  background: #e0e0e0;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 0.95em;
+}

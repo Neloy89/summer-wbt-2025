@@ -1,0 +1,120 @@
+/* viewprofile.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  border: 2px solid #333;
+  background: #fff;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 0 20px;
+}
+.logo {
+  height: 50px;
+}
+.login-status {
+  font-size: 16px;
+  margin-top: 10px;
+}
+.login-status a {
+  color: #4b0082;
+  text-decoration: underline;
+}
+hr {
+  border: 1px solid #333;
+  margin: 0;
+}
+.main-content {
+  display: flex;
+  min-height: 400px;
+}
+.sidebar {
+  width: 220px;
+  border-right: 1px solid #333;
+  padding: 20px 10px 10px 20px;
+  background: #fafafa;
+}
+.sidebar b {
+  font-size: 18px;
+}
+.sidebar ul {
+  list-style: disc inside;
+  padding-left: 0;
+  margin-top: 10px;
+}
+.sidebar ul li {
+  margin-bottom: 8px;
+}
+.sidebar ul li a {
+  color: #4b0082;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.profile-section {
+  flex: 1;
+  padding: 20px 30px;
+}
+.profile-section h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #333;
+  display: inline-block;
+  font-weight: bold;
+}
+.profile-details {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+.profile-info {
+  flex: 2;
+  font-size: 17px;
+}
+.profile-info div {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 350px;
+}
+.profile-info div:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.profile-info a {
+  color: #4b0082;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.profile-picture {
+  flex: 1;
+  text-align: center;
+  margin-left: 40px;
+}
+.profile-picture img {
+  width: 120px;
+  height: 120px;
+  border-radius: 10px;
+  background: #f5f5f5;
+  margin-bottom: 10px;
+}
+.profile-picture a {
+  color: #4b0082;
+  text-decoration: underline;
+  font-size: 16px;
+}
+.footer {
+  text-align: center;
+  padding: 10px 0;
+  font-size: 17px;
+  background: #fff;
+}
